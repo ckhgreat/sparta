@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        * {
+            font-family: 'Stylish', sans-serif;
+        }
+
+        .wrap {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .comment1 {
+            color: black;
+            font-weight: bold;
+        }
+
+        .form {
+            max-width: 500px;
+            padding: 1rem;
+            margin: 1rem auto;
+            border-color: #e9ecef;
+            border-radius: 0.3rem;
+            border: solid;
+            display: block;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="card" style="width: 18rem; margin: 30px;">
+            <img class="card-img-top" src="뱀인형1.jpg"
+                style="width: 640px; height: 335px; position: relative; right: 180px;" alt="Card image cap">
+        </div>
+        <div class="comment1">
+            <h1 style="font-size: 42px; display: inline-block;">아이들에게 인기만점 뱀 인형!</h1>
+            <h1 style="font-size: larger; display: inline-block;">&nbsp;가격 : 9,900원/개</h1>
+        </div>
+        <p></p>
+        <div class="comment2" style="line-height: 80%;">
+            <p style="font-size: 24px;">&nbsp;놀라운 크기! 생생한 리얼함! 아이들이 좋아하는 뱀인형!</p>
+            <p style="font-size: 24px;">&nbsp;머리 쪽 주머니에 손을 넣으면 뱀이 말을 해요!</p>
+        </div>
+        <div class="form">
+            <div>
+                <div class="form-name">
+                    <label for="exampleFormControlInput1">주문자 이름 : </label>
+                    <input class="form-control" style="width: 350px;" placeholder="">
+                </div>
+                <div class="form-select">
+                    <label for="inputState">수량 : </label>
+                    <select id="inputState" class="form-control" style="width: 350px;">
+                        <option selected>---수량을 선택하세요---</option>
+                        <option>&nbsp;1개</option>
+                        <option>&nbsp;2개</option>
+                        <option>&nbsp;3개</option>
+                        <option>&nbsp;4개</option>
+                        <option>&nbsp;5개</option>
+                    </select>
+                </div>
+                <div class="form-address">
+                    <label for="exampleFormControlInput1">주소 : </label>
+                    <input class="form-control" style="width: 350px;" placeholder="">
+                </div>
+                <div class="form-number">
+                    <label for="exampleFormControlInput1">전화번호 : </label>
+                    <input class="form-control" style="width: 350px;" placeholder="">
+                </div>
+                <p></p>
+                <button type="button" class="btn btn-primary">주문하기</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
