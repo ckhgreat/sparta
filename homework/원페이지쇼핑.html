@@ -47,6 +47,39 @@
             font-weight: bold;
         }
     </style>
+    
+    <script>
+        function order() {
+            let name = $('#form-write-name').val();
+            let count = $('#inputState').val();
+            let address = $('#form-write-address').val();
+            let phone = $('#form-write-phone').val();
+
+            if (name == '') {
+                alert('이름을 입력하세요!');
+                $('#form-write-name').focus()
+                return
+            } else if (count == '---수량을 선택하세요---') {
+                alert('수량을 선택하세요!');
+                $('#inputState').focus()
+                return
+            } else if (address == '') {
+                alert('주소를 입력하세요!');
+                $('#form-write-address').focus()
+                return
+            } else if (phone == '') {
+                alert('전화번호를 입력하세요!');
+                $('#form-write-phone').focus()
+                return
+            } else if (phone.length < 11) {
+                alert('올바르지 않은 번호입니다! 11자리로 입력해주세요.');
+                $('#form-write-phone').focus()
+                return
+            } else {
+                alert("주문이 접수되었습니다!!")
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -61,14 +94,14 @@
         </div>
         <p></p>
         <div class="comment2" style="line-height: 80%;">
-            <p style="font-size: 24px;">&nbsp;놀라운 크기! 생생한 리얼함! 아이들이 좋아하는 뱀인형!</p>
+            <p style="font-size: 24px;">&nbsp;놀라운 크기! 생생한 리얼함! 아이들이 좋아하는 뱀 인형!</p>
             <p style="font-size: 24px;">&nbsp;머리 쪽 주머니에 손을 넣으면 뱀이 말을 해요!</p>
         </div>
         <div class="form">
             <div>
-                <div class="form-name">
+                <div id="form-name">
                     <label for="exampleFormControlInput1">주문자 이름 : </label>
-                    <input class="form-control" style="width: 350px;" placeholder="">
+                    <input class="form-control" id="form-write-name" style="width: 350px;" placeholder="">
                 </div>
                 <div class="form-select">
                     <label for="inputState">수량 : </label>
@@ -83,14 +116,14 @@
                 </div>
                 <div class="form-address">
                     <label for="exampleFormControlInput1">주소 : </label>
-                    <input class="form-control" style="width: 350px;" placeholder="">
+                    <input class="form-control" id="form-write-address" style="width: 350px;" placeholder="">
                 </div>
                 <div class="form-number">
                     <label for="exampleFormControlInput1">전화번호 : </label>
-                    <input class="form-control" style="width: 350px;" placeholder="">
+                    <input class="form-control" id="form-write-phone" style="width: 350px;" placeholder="-없이 숫자만 입력하세요">
                 </div>
                 <p></p>
-                <button type="button" class="btn btn-primary">주문하기</button>
+                <button onclick="order()" type="button" class="btn btn-primary">주문하기</button>
             </div>
         </div>
     </div>
