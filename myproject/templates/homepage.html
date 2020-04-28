@@ -4,7 +4,7 @@
 <head>
 
     <!-- Webpage Title -->
-    <title>Hello, world!</title>
+    <title>Playing yourself~</title>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -51,22 +51,45 @@
             padding: 50px 20px;
             text-align: center;
         }
-        #string{
-            background:url('https://ifh.cc/g/7lJePw.jpg')                                      
-        }              
-        #wind{
-            background:url('https://ifh.cc/g/myRj3j.jpg')
+
+        #string {
+            background: url('https://ifh.cc/g/7lJePw.jpg')
         }
-        #drum{
-            background:url('https://ifh.cc/g/TFBnZL.jpg')
+
+        #wind {
+            background: url('https://ifh.cc/g/myRj3j.jpg')
         }
-        #piano{
-            background:url('https://ifh.cc/g/kVJ6p2.jpg')
+
+        #drum {
+            background: url('https://ifh.cc/g/TFBnZL.jpg')
         }
-        #etc{
-            background:url('https://ifh.cc/g/mS7AyQ.jpg') 
+
+        #piano {
+            background: url('https://ifh.cc/g/kVJ6p2.jpg')
+        }
+
+        #etc {
+            background: url('https://ifh.cc/g/mS7AyQ.jpg')
         }
     </style>
+    <script>
+        function read_string() {
+            location.href='read_string.html'        
+        }
+        function read_wind() {
+            location.href='read_wind.html'        
+        }
+        function read_drum() {
+            location.href='read_drum.html'        
+        }
+        function read_piano() {
+            location.href='read_piano.html'        
+        }
+        function read_etc() {
+            location.href='read_etc.html'        
+        }
+        
+    </script>     
 
 </head>
 
@@ -79,15 +102,15 @@
             <hr class="my-4">
         </div>
         <div class="buttons">
-            <input type="button" class="circle" id="string" type="button">   
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        
-            <input type="button" class="circle" id="wind" type="button">
+            <input type="button" class="circle" id="string" type="button" onclick="read_string()">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="button" class="circle" id="drum" type="button">
+            <input type="button" class="circle" id="wind" type="button" onclick="read_wind()">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" class="circle" id="drum" type="button" onclick="read_drum()">
             <p></p>
-            <input type="button" class="circle" id="piano" type="button">
+            <input type="button" class="circle" id="piano" type="button" onclick="read_piano()">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="button" class="circle" id="etc" type="button">
+            <input type="button" class="circle" id="etc" type="button" onclick="read_etc()">
         </div>
     </div>
 </body>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Webpage Title -->
+    <title>Etc</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- 구글폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+
+    <!-- style -->
+    <style type="text/css">
+        * {
+            font-family: 'Stylish', sans-serif;
+        }
+
+        .wrap {
+            width: 900px;
+            margin: auto;
+        }
+    </style>
+    <script>
+        $.ajax({
+                type: "GET",
+                url: "/instrument",
+                data: {},
+                success: function (response) {
+                    if (response['result'] == 'success') {
+                        let instrument = response['instrument'];
+                        for (let i = 0; i < instrument.length; i++) {
+                            make_card(instrument[i]['name'], instrument[i]['maker'], instrument[i]['madein'], instrument[i]['price']);
+                        }
+                    } else {
+                        alert('악기 정보를 가져오지 못했습니다..');
+                    }
+                }
+            })
+    </script>
+    
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="detail_list">
+            <table class="table">
+                <thead>
+                    <tr onclick>
+                        <th class="meta_info" scope="col">이름</th>
+                        <th class="meta_info" scope="col">제조사</th>
+                        <th class="meta_info" scope="col">제조국가</th>
+                        <th class="meta_info" scope="col">가격</th>
+                    </tr>
+                </thead>
+                <tbody id="detail-box">
+                    <tr>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
